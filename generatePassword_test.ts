@@ -33,11 +33,11 @@ Deno.test("should generate a random short password with only numbers", () => {
   const nonNumbersSet = new Set([
     ...SYMBOLS.split(""),
     ...LETTERS.toUpperCase().split(""),
-    ...LETTERS.toUpperCase().split(""),
+    ...LETTERS.split(""),
   ]);
   const options = {
-    numberOfLowercaseLetters: 10,
-    numberOfNumbers: 0,
+    numberOfLowercaseLetters: 0,
+    numberOfNumbers: 10,
     numberOfSymbols: 0,
     numberOfUppercaseLetters: 0,
   };
